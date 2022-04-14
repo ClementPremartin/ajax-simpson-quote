@@ -21,8 +21,12 @@ function fetchSimpsonQuoteJSON() {
         console.log(data[0].image);
        
         document.querySelector('#quote').innerHTML = quoteHtml;
-      });
+      }); 
   }
+  const button = document.getElementById("button");
+      button.addEventListener("click", function() {
+        fetchSimpsonQuoteJSON()
+      })
   
   fetchSimpsonQuoteJSON();
 
